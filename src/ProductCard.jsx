@@ -1,17 +1,14 @@
-import { useState } from "react";
 import Button from "./Button";
 import "./ProductCard.css";
 
-function ProductCard({ product, addToCart, removeFromCart }) {
-  const [productAddedToCart, setProductAddedToCart] = useState(false);
+function ProductCard({ product, addToCart, removeFromCart, cartItems }) {
+  const inCart = cartItems.some((item) => item.id === product.id);
 
   function handleAddToCart() {
     addToCart(product);
-    setProductAddedToCart(true);
   }
   function handleRemoveFromCart() {
     removeFromCart(product);
-    setProductAddedToCart(false);
   }
   return (
     <div className="card">
@@ -27,7 +24,7 @@ function ProductCard({ product, addToCart, removeFromCart }) {
           <p>${product.regPrice}.00</p>
         )}
       </div>
-      {productAddedToCart ? (
+      {inCart ? (
         <Button onClick={handleRemoveFromCart}>Remove from Cart</Button>
       ) : (
         <Button onClick={handleAddToCart}>Add to Cart</Button>

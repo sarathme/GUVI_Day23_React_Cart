@@ -56,6 +56,7 @@ function App() {
               product={product}
               addToCart={addtoCartHandler}
               removeFromCart={removeFromCartHandler}
+              cartItems={cartItems}
             />
           ))
         ) : (

@@ -154,9 +154,10 @@ function App() {
 ```jsx
 // ProductCard Component.
 
-function ProductCard({ product, addToCart, removeFromCart }) {
-  // This state is to manipulate the buttons.
-  const [productAddedToCart, setProductAddedToCart] = useState(false);
+function ProductCard({ product, addToCart, removeFromCart, cartItems }) {
+  // This is to manipulate the buttons.
+  const inCart = cartItems.some((item) => item.id === product.id);
+
 
   function handleAddToCart() {
     addToCart(product);
@@ -203,9 +204,9 @@ function App() {
 ```jsx
 // ProductCard Component.
 
-function ProductCard({ product, addToCart, removeFromCart }) {
-  // This state is to manipulate the buttons.
-  const [productAddedToCart, setProductAddedToCart] = useState(false);
+function ProductCard({ product, addToCart, removeFromCart, cartItems }) {
+  const inCart = cartItems.some((item) => item.id === product.id);
+
 
   function handleRemoveFromCart() {
     removeFromCart(product);

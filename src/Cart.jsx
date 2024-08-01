@@ -1,6 +1,15 @@
 import Button from "./Button";
 
 function Cart({ cartItems, removeFromCart, openCart }) {
+  const total = cartItems.reduce((acc, cur) => {
+    if (cur.disPrice > 0) {
+      return acc + cur.disPrice;
+    }
+
+    return acc + cur.regPrice;
+  }, 0);
+
+  console.log(total);
   if (cartItems.length === 0) {
     return (
       <div className="cartItems">
@@ -32,6 +41,7 @@ function Cart({ cartItems, removeFromCart, openCart }) {
           <Button onClick={() => removeFromCart(cartItem)}>X</Button>
         </div>
       ))}
+      <h1>Total: {total}</h1>
     </div>
   );
 }
