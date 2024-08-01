@@ -115,9 +115,9 @@ function Cart({ cartItems, removeFromCart, openCart }) {
 }
 ```
 
-### Working with state
+### Working with states
 
-1. In App component I have used to states one for initializing Cart array and
+1. In App component I have used two states one for initializing Cart array and
    another one to open or close cart (Boolean)
 
 ```jsx
@@ -133,9 +133,9 @@ function App() {
 }
 ```
 
-## Handler functions.
+## Handler functions (Lifting State Up)
 
-### Adding items to the cart array.
+### Adding items to the cart array
 
 1. Inorder add items to the cart I mutated the cartItems state variable.
 
