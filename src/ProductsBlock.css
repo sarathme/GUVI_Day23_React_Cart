@@ -1,0 +1,17 @@
+.products-block {
+  width: min(1440px, 100%);
+  margin-inline: auto;
+
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  padding: 2em;
+  /* background-color: red; */
+}
+
+@media (min-width: 768px) {
+  .products-block {
+    padding: 2em;
+  }
+}

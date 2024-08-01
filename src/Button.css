@@ -1,0 +1,43 @@
+.btn {
+  padding: 1em;
+  border-radius: 0.6em;
+  border: 1px solid;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 500ms;
+  vertical-align: center;
+}
+
+.btn * {
+  margin: 0 0.6rem;
+}
+
+.btn-cart {
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 0.6em 0.5em;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #000;
+  color: white;
+  outline: none;
+}
+
+/* .btn span {
+  width: 1rem;
+  height: 1rem;
+} */
+.btn span:not(:first-child) {
+  background-color: black;
+  color: white;
+  /* display: flex;
+  align-items: center; */
+  padding: 0.4em 0.6em;
+  /* width: 2rem;
+  height: 2rem; */
+  border-radius: 50%;
+}
