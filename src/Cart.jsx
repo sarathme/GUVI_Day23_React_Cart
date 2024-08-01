@@ -41,7 +41,7 @@ function Cart({ cartItems, removeFromCart, openCart }) {
           <Button onClick={() => removeFromCart(cartItem)}>X</Button>
         </div>
       ))}
-      <h1>Total: {total}</h1>
+      <h1>Total: ${total.toFixed(2)}</h1>
     </div>
   );
 }
